@@ -36,12 +36,6 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
-    /* @media (max-width: 1024px){
-        html {
-            font-size: 10px;
-        }
-    } */
-
     @media (max-width: 812px){
         html {
             font-size: 10px;

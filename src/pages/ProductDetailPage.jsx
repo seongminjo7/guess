@@ -206,11 +206,11 @@ const DetailText = styled.div`
         width: 100%;
         padding-top: 100px;
                 h3{
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
 
         p.price{
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
     }
 
@@ -234,7 +234,7 @@ const DetailEct = styled.div`
     }
 
     @media (max-width: 812px){
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 `
 

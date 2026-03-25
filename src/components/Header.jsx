@@ -3,7 +3,7 @@ import MainMenu from "./MainMenu"
 import User from "./User"
 import styled, { css } from 'styled-components';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useScrollDirection from '../hooks/useScrollDirection.js';
 
 
@@ -12,9 +12,16 @@ export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    const location = useLocation();
+
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     }, [isOpen]);
+
+    // 3. 페이지 경로(location.pathname)가 변경될 때마다 isOpen을 false로 초기화
+    useEffect(() => {
+        setIsOpen(false);
+    }, [location.pathname]);
 
     // 스크롤이 'down'일 때만 'header-hidden' 클래스 적용
     const headerClass = scrollDirection === 'down' ? 'header-hidden' : '';
@@ -35,7 +42,8 @@ export default function Header() {
                 </PcNav>
 
                 <MobileNavWapper>
-                    <Ham onClick={() => setIsOpen(prev => !prev)}>
+                    {/* 햄버거 메뉴 애니메이션 적용을 위해 isOpen 상태에 따라 클래스 추가 (선택 사항) */}
+                    <Ham onClick={() => setIsOpen(prev => !prev)} className={isOpen ? 'active' : ''}>
                         <span class="line01"></span>
                         <span class="line02"></span>
                         <span class="line03"></span>
