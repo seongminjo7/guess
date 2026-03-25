@@ -90,11 +90,11 @@ const About = styled.div`
 
     @media (max-width: 812px){
         .title{
-            font-size: 2.5rem;
+            font-size: 2rem;
         }   
 
         .price{
-            font-size: 2.2rem;
+            font-size: 1.8rem;
         }
     }
 `

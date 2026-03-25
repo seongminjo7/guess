@@ -170,7 +170,13 @@ const MainMoreWrapper = styled.div`
     
     @media (max-width: 1400px){
         p {
-            font-size: 5rem;
+            font-size: 4rem;
         }
     }
+
+     @media (max-width: 350px){
+        p {
+            font-size: 3.5rem;
+        }
+     }
 `

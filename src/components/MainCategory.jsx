@@ -122,12 +122,18 @@ const Navigation = styled.nav`
     @media (max-width: 624px){
         ul{
             li {
-                font-size: 6rem;
+                font-size: 5rem;
             }
         }
     }
 
         @media (max-width: 420px){
         padding: 20px;
+
+                ul{
+            li {
+                font-size: 4rem;
+            }
+        }
     }
 `
